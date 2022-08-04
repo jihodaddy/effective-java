@@ -163,6 +163,25 @@ public static <E extends Enum<E>> EnumSet<E> noneOf(Class<E> elementType) {
 이외에도 DTO <-> Entity을 진행하는데 있어서 아주 유용하다고 한다 -> 이건 나도 생각했던건데 실제로 그렇다고 하니까 한번 적용해보자  
 //static으로 빼긴 뺐는데... 생성자도 한꺼번에 처리해버리고 싶지만 dto같은 경우에는 generator를 사용하기 때문에 이거쓰면 엔티티 전용으로밖애 못만들구나
 
+### 흔히 사용하는 명명방식들
+
+-   from : 매개변수를 하나 받아서 해당 타입의 인스턴스를 반환
+    -   Date d = Date.from(instant);
+-   of : 여러 매개변수를 받아 적합한 타입의 인스턴스를 반환
+    -   Set faceCards = EnumSet.of(JACK, QUEEN, KING);
+-   valueOf : from과 of의 더 자세한 버전
+    -   BigInteger prime = BigInteger.valueOf(Integer.MAX_VALUE);
+-   instance || getInstance : (매개변수를 받는다면) 매개변수로 명시한 인스턴스를 반환하지만, 같은 인스턴스임을 보장하지 않는다.
+    -   StackWalker luke = StackWalker.getInstance(options);
+-   create || newInstance : intacne 혹은 getInstance와 같지만, 매번 새로운 인스턴스를 생성해 반환한다.
+    -   Object newArray = Array.newInstance(classObject, arrayLen);
+-   getType : getInstance와 같으나, 생성할 클래스가 아닌 다른 클래스에 팩토리 메소드를 정의할 때 쓴다.
+    -   FileStore fs = Files.getFileStore(path);
+-   newType : newInstance와 같으나, 생성할 클래스가 아닌 다른 클래스에 팩토리 메소드를 정의할 때 쓴다.
+    -   BufferedReader br = Files.newBufferedReader(path);
+-   type : getType과 newType의 간결한 버전
+    -   List litany = Collections.list(legacyLitany);
+
 
 
 
