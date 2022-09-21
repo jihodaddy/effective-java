@@ -177,8 +177,3 @@ public class CustomHashSetTest {
 > 상속은 반드시 `is a kind of` 관계를 생각하자. 하위 클래스가 상위 클래스의 모든 역할을 하는지, 분류의 관계인지 확인하고 사용하자 (다형성, 코드 재사용만 생각해서 하지 말것)  
 위 관계가 아니라면 컴포지션을 사용하자
 
-## 출처
-
-- 이펙티브 자바 3판
-- 스프링 입문을 위한 자바 객체지향의 원리와 이해
-- [https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/27db6csx(v=vs.90)?redirectedfrom=MSDN](https://docs.microsoft.com/en-us/previous-versions/visualstudio/visual-studio-2008/27db6csx(v=vs.90)?redirectedfrom=MSDN)
